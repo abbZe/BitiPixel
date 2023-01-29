@@ -1,0 +1,14 @@
+@mixin link--hover {
+    .link {
+        &:hover {
+            background-color: yellow;
+            color: lighten($color: $text-color, $amount: 30);
+            border-color: lighten($color: $text-color, $amount: 30);
+        }
+
+        &:active {
+            color: lighten($color: $text-color, $amount: 70);
+            border-color: lighten($color: $text-color, $amount: 70);
+        }
+    }
+}

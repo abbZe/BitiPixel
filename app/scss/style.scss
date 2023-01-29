@@ -1,0 +1,28 @@
+@import "./base/normalize-reset";
+@import "./base/vars";
+@import "./base/mixins";
+@import "./base/globals";
+
+//--- HEADER
+@import "./modules/header";
+
+//--- SECTIONS
+@import "./modules/hero";
+@import "./modules/about";
+@import "./modules/gallery";
+@import "./modules/collection";
+@import "./modules/animation";
+@import "./modules/contacts";
+@import "./modules/collection-gallery";
+
+//--- FOOTER
+@import "./modules/footer";
+
+//--- ELEMENTS
+
+//-- Ниже модель для записи значений селекторов
+/* Positioning */
+/* Box model */
+/* Typography */
+/* Visual */
+/* Misc */

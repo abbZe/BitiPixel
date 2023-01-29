@@ -1,0 +1,62 @@
+.main-footer {
+    @include link--hover;
+    background-color: #f3f3f3;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 100%;
+    min-width: 1170px;
+    padding: $sections-padding;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.main-footer a {
+    color: $text-color;
+}
+
+.socials__title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.socials-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socials-list__item {
+    a {
+        text-decoration: none;
+        padding: 10px;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+    }
+
+    .instagram::before {
+        margin-right: 10px;
+        font: var(--fa-font-brands);
+        content: "\f16d";
+        display: inline-block;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .vkontakte::before {
+        margin-right: 10px;
+        font: var(--fa-font-brands);
+        content: "\f189";
+        display: inline-block;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .youtube::before {
+        margin-right: 10px;
+        font: var(--fa-font-brands);
+        content: "\f167";
+        display: inline-block;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+}

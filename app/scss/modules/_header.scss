@@ -1,0 +1,73 @@
+.main-header {
+    @include link--hover;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: $sections-width;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 50%;
+    margin-right: -585px;
+    z-index: 9999;
+    background-color: white;
+}
+
+//--- For glitch animation start
+.main-header__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.main-header__title {
+    color: #000;
+    font-weight: 600;
+    font-size: 28px;
+    position: relative;
+    top: 3px;
+    text-transform: uppercase;
+    font-family: "Press Start 2P", cursive;
+    &:before,
+    &:after {
+        content: "BitiPixel";
+        color: #000;
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+    }
+    &:before {
+        left: 3px;
+        text-shadow: -3px 0 yellow;
+        animation: glitch-before 2s linear 0s infinite alternate;
+    }
+    &:after {
+        left: -3px;
+        text-shadow: -3px 0 spin(yellow, 180);
+        animation: glitch-after 2s linear 0s infinite alternate;
+    }
+}
+//--- For glitch animation end
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    list-style: none;
+}
+
+.nav-list__item a {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.main-header a {
+    text-decoration: none;
+    color: $text-color;
+}

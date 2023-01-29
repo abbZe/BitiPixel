@@ -1,0 +1,165 @@
+//!--- Glitch Effect for Title. I took this from https://codepen.io/anna_blok/pen/XOGjJP
+
+@keyframes glitch-before {
+    $steps: 20;
+    @for $i from 0 through $steps {
+        #{percentage($i * calc(1 / $steps))} {
+            clip: rect(random(150) + px, 350px, random(150) + px, 30px);
+        }
+    }
+}
+
+@keyframes glitch-after {
+    $steps: 20;
+    @for $i from 0 through $steps {
+        #{percentage($i * calc(1 / $steps))} {
+            clip: rect(random(150) + px, 350px, random(150) + px, 30px);
+        }
+    }
+}
+
+//!--- Packman Animation. I took this from https://codepen.io/wifi/pen/DGYLPw
+
+.animation {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.pacman {
+    animation: 6s linear 1s infinite running slidein;
+    width: 200px;
+    .pacman-top {
+        background-color: yellow;
+        height: 100px;
+        width: 200px;
+        border-radius: 100px 100px 0 0;
+        animation: spin1 0.5s infinite linear;
+    }
+
+    .pacman-bottom {
+        background-color: yellow;
+        height: 100px;
+        width: 200px;
+        border-radius: 0 0 100px 100px;
+        animation: spin2 0.5s infinite linear;
+    }
+
+    .feed {
+        padding-bottom: -64px;
+        margin-left: 204px;
+        top: 20px;
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        border-radius: 30%;
+        -webkit-animation: eat 1s linear 0s infinite;
+        animation: eat 1s linear 0s infinite;
+    }
+}
+
+/* Animation Packman*/
+
+@keyframes spin1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-35deg);
+    }
+}
+@keyframes spin2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(35deg);
+    }
+}
+
+@-moz-keyframes spin1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-35deg);
+    }
+}
+@-moz-keyframes spin2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(35deg);
+    }
+}
+
+@-webkit-keyframes spin1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-35deg);
+    }
+}
+@-webkit-keyframes spin2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(35deg);
+    }
+}
+
+@keyframes slidein {
+    0% {
+        transform: translateX(-200px);
+    }
+
+    100% {
+        transform: translateX(1200px);
+    }
+}
+
+@keyframes eat {
+    0% {
+        box-shadow: 100px 65px 0 0 black, 300px 65px 0 0 black,
+            500px 65px 0 0 black, 700px 65px 0 0 black, 900px 65px 0 0 black,
+            1100px 65px 0 0 black, 1300px 65px 0 0 black;
+    }
+
+    100% {
+        box-shadow: 0px 65px 0 0 black, 100px 65px 0 0 black,
+            300px 65px 0 0 black, 500px 65px 0 0 black, 700px 65px 0 0 black,
+            900px 65px 0 0 black, 1100px 65px 0 0 black;
+    }
+}
+
+@-moz-keyframes eat {
+    0% {
+        box-shadow: 100px 65px 0 0 black, 300px 65px 0 0 black,
+            500px 65px 0 0 black, 700px 65px 0 0 black, 900px 65px 0 0 black,
+            1100px 65px 0 0 black, 1300px 65px 0 0 black;
+    }
+
+    100% {
+        box-shadow: 0px 65px 0 0 black, 100px 65px 0 0 black,
+            300px 65px 0 0 black, 500px 65px 0 0 black, 700px 65px 0 0 black,
+            900px 65px 0 0 black, 1100px 65px 0 0 black;
+    }
+}
+
+@-webkit-keyframes eat {
+    0% {
+        box-shadow: 100px 65px 0 0 black, 300px 65px 0 0 black,
+            500px 65px 0 0 black, 700px 65px 0 0 black, 900px 65px 0 0 black,
+            1100px 65px 0 0 black, 1300px 65px 0 0 black;
+    }
+
+    100% {
+        box-shadow: 0px 65px 0 0 black, 100px 65px 0 0 black,
+            300px 65px 0 0 black, 500px 65px 0 0 black, 700px 65px 0 0 black,
+            900px 65px 0 0 black, 1100px 65px 0 0 black;
+    }
+}

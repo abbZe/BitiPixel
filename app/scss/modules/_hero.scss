@@ -1,0 +1,21 @@
+.hero {
+    width: 100%;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.hero video {
+    display: block;
+    width: 100%;
+}
+
+.hero__title {
+    color: white;
+    font-family: "Press Start 2P", cursive;
+    position: absolute;
+    bottom: 320px;
+    left: 132px;
+    opacity: 0.6;
+    padding: 15px 5px;
+    font-size: 40px;
+}

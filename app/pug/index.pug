@@ -1,0 +1,28 @@
+doctype html
+html(lang="ru")
+    head
+        include ./modules/_head.pug
+
+
+        title Главная: Музей BitiPixel
+
+
+    body
+
+
+        include ./modules/_header.pug
+        
+        main 
+            include ./modules/_hero.pug
+            include ./modules/_about.pug
+            include ./modules/_gallery.pug
+            include ./modules/_collection.pug
+            include ./modules/_animation.pug
+            include ./modules/_contacts.pug
+
+
+        include ./modules/_footer.pug
+
+    script(src="../js/main.min.js") 
+
+            

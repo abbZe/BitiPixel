@@ -1,0 +1,14 @@
+body {
+    font-family: "Unbounded", cursive;
+    font-size: 20px;
+    line-height: 2rem;
+    background-color: rgb(255, 255, 255);
+    color: $text-color;
+}
+
+main {
+    padding: $sections-padding;
+    margin: 0 auto;
+    width: $sections-width;
+    margin-top: 53px;
+}

@@ -1,0 +1,111 @@
+.collection-gallery {
+    margin-bottom: 50px;
+}
+
+.collection-gallery h2 {
+    text-align: center;
+    font-family: "Press Start 2P", cursive;
+    font-size: 35px;
+    position: relative;
+    margin-bottom: 50px;
+    top: 25px;
+}
+
+.collection-gallery__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.collection-gallery__item {
+    width: 500px;
+}
+
+figcaption {
+    font-weight: 400;
+}
+
+.collection-gallery__item h3 {
+    font-family: "Press Start 2P", cursive;
+}
+
+.collection-gallery__item img {
+    width: 87%;
+    margin: 0;
+    padding: 0;
+}
+
+//--- CARD
+
+.collection-gallery__item {
+    width: 350px;
+    height: 500px;
+    perspective: 1000px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1100ms;
+    transform-style: preserve-3d;
+}
+
+.collection-gallery__item:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card__front,
+.card__back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    border: 3px solid black;
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.card__front {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    background-color: white;
+}
+
+.card__front img {
+    position: absolute;
+    top: 19%;
+    right: 50%;
+    margin-right: -140px;
+}
+
+.card__front h3 {
+    display: flex;
+    font-size: 25px;
+    color: #333333;
+    margin-bottom: 20px;
+    position: absolute;
+    background-color: #ffcc66;
+    padding: 15px;
+    border-radius: 2rem;
+}
+
+.card__back {
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffcc66;
+    transform: rotateY(180deg);
+    padding: 30px;
+    font-size: 16px;
+}
